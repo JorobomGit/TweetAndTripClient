@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=Short+Stack');
+
+body {
+  padding-top: 110px;
+  padding-bottom: 40px;
+  background: #eee linear-gradient(294deg, #00aced, #ff4081);
+  background-size: 400% 400%;
+
+  -webkit-animation: GradientBackground 18s ease infinite;
+  -moz-animation: GradientBackground 18s ease infinite;
+  -o-animation: GradientBackground 18s ease infinite;
+  animation: GradientBackground 18s ease infinite;
+  font-family: 'Short Stack', cursive;
+}
+
+@-webkit-keyframes GradientBackground {
+  0%{background-position:78% 0}
+  50%{background-position:23% 100%}
+  100%{background-position:78% 0}
+}
+@-moz-keyframes GradientBackground {
+  0%{background-position:78% 0}
+  50%{background-position:23% 100%}
+  100%{background-position:78% 0}
+}
+@-o-keyframes GradientBackground {
+  0%{background-position:78% 0}
+  50%{background-position:23% 100%}
+  100%{background-position:78% 0}
+}
+@keyframes GradientBackground {
+  0%{background-position:78% 0}
+  50%{background-position:23% 100%}
+  100%{background-position:78% 0}
+}
+.background-image {
+  background-image: url('assets/background.jpg');
+  background-size: cover;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  opacity: .6;
+}

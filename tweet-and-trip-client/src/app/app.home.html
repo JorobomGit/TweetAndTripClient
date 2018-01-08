@@ -1,0 +1,15 @@
+<div class="container content">
+  <img src="assets\tweet-and-trip-logo.png" class="center-element">
+  <form class="form-signin">
+    <h1 class="form-signin-heading">Let's find your next trip!</h1>
+    <input  type="text" [attr.disabled]="disableInput"
+            class="form-control" placeholder="Twitter username" (input)="onInput($event)">
+    <button [attr.disabled]="disableButtonAttr"
+            [ngClass]="{'disabled': disableButton }"
+            class="btn btn-lg btn-primary btn-block"
+            type="submit" (click)="onClickSearch($event)">
+      {{search}}
+      <i *ngIf="loadingButton" class="fa fa-circle-o-notch fa-spin"></i>
+    </button>
+  </form>
+</div>
