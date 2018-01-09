@@ -1,21 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppHomeComponent } from './app.home';
+import { ListComponent } from './list/list.component';
+import { RootComponent } from './root/root.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
+const appRoutes: Routes = [{
+  path: '',
+  component: AppHomeComponent
+}, {
+  path: 'results/:name',
+  component: ListComponent
+}];
 
 @NgModule({
-  declarations: [
-    AppHomeComponent
-  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppHomeComponent]
+  declarations: [
+    RootComponent,
+    AppHomeComponent,
+    ListComponent
+  ],
+  bootstrap: [
+    RootComponent
+  ]
 })
-export class AppModule { }
+export class AppModule {
+}

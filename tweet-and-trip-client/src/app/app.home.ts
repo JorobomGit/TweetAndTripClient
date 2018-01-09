@@ -11,7 +11,11 @@ export class AppHomeComponent {
   disableButtonAttr = false;
   disableInput = undefined;
   search = 'Search!';
+  subtitle = 'Let\'s find your next adventure!';
+  name = '';
 
+  // NEXT: Bind button click to make http request
+  // Create new screen with data
 
   onClickSearch() {
     this.disableButton = true;
@@ -21,6 +25,7 @@ export class AppHomeComponent {
   }
 
   onInput(event) {
+    this.name = event.srcElement.value;
     this.disableButton = !(event.srcElement.value.length > 0);
     this.disableButtonAttr = !(event.srcElement.value.length > 0) ? true : undefined;
   }
