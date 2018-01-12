@@ -1,5 +1,7 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css?family=Short+Stack');
+
 
 body {
   padding-top: 110px;
@@ -45,4 +47,10 @@ body {
   right: 0;
   top: 0;
   opacity: .6;
+  z-index: -2;
+}
+
+.center-element{
+  display:block;
+  margin:auto;
 }

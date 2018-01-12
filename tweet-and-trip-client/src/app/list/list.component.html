@@ -1,1 +1,60 @@
-{{results}}
+<mat-progress-spinner
+  class="center-element"
+  color="accent"
+  mode="indeterminate"
+  value="50"
+  *ngIf="!results">
+</mat-progress-spinner>
+
+<div class="margin-h-xl" *ngIf="results">
+  <img src="..\assets\tweet-and-trip-logo-mini.png" class="center-element">
+  <mat-table class="table" #table [dataSource]="results">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell class="row" *matCellDef="let element"> {{element.position}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="userVenue1">
+      <mat-header-cell *matHeaderCellDef> Venue 1 </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+            {{element.userVenue1.name}}
+            {{element.userVenue1.category}}
+            {{element.userVenue1.city}}
+      </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="userVenue2">
+      <mat-header-cell *matHeaderCellDef> Venue 2 </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+            {{element.userVenue2.name}}
+            {{element.userVenue2.category}}
+            {{element.userVenue2.city}}
+      </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="userVenue3">
+      <mat-header-cell *matHeaderCellDef> Venue 3 </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+            {{element.userVenue3.name}}
+            {{element.userVenue3.category}}
+            {{element.userVenue3.city}}
+      </mat-cell>
+    </ng-container>
+
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+</div>

@@ -7,6 +7,7 @@ import { ListComponent } from './list/list.component';
 import { RootComponent } from './root/root.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { CustomMaterialModule } from './custom-material/custom-material.module';
 
 const appRoutes: Routes = [{
   path: '',
@@ -20,6 +21,7 @@ const appRoutes: Routes = [{
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
+    CustomMaterialModule,
     HttpClientModule
   ],
   declarations: [

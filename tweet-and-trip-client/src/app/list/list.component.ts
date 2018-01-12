@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ActivatedRoute} from '@angular/router';
+import {MatTableDataSource} from '@angular/material';
 
 @Component({
   selector: 'app-list',
@@ -9,17 +10,39 @@ import {ActivatedRoute} from '@angular/router';
 })
 
 export class ListComponent implements OnInit {
-
+  results = undefined;
+  displayedColumns = ['position', 'name', 'userVenue1', 'userVenue2', 'userVenue3'];
   constructor(private http: HttpClient, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
       this.http.get('http://localhost:4567/destination?name=' + params['name']).subscribe(data => {
-          Object.keys(data).forEach( key => {
-            console.log(data[key]);
+         const acc = [];
+          Object.keys(data).forEach( index => {
+            const destination = data[index];
+            console.log(data[index]);
+            acc.push({
+              'position': Number(index) + 1,
+              'name': destination.name,
+              'userVenue1': destination.userVenues[0],
+              'userVenue2': destination.userVenues[1],
+              'userVenue3': destination.userVenues[2]
+            });
           });
+          this.results = new MatTableDataSource<Element>(acc);
+
         }
       );
     });
   }
+
 }
+
+export interface Element {
+  position: number;
+  name: string;
+  userVenue1: object;
+  userVenue2: object;
+  userVenue3: object;
+}
+
