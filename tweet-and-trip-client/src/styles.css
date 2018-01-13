@@ -10,6 +10,26 @@
   color: #ff4081;
 }
 
+.error-color {
+  color: #ac2925;
+}
+
+.margin-h-xl {
+  margin: 0 20rem;
+}
+
+.margin-top-xs {
+  padding-top: 2rem;
+}
+
+.padding-v-s {
+  padding: 3rem 0;
+}
+
+.half-width {
+  width: 50%;
+}
+
 body {
   background: #eee linear-gradient(294deg, #00aced, #ff4081);
   background-size: 400% 400%;
@@ -42,7 +62,7 @@ body {
 }
 
 .content {
-  padding-top: 12.5rem;
+  padding-top: 10rem;
   padding-bottom: 4rem;
 }
 

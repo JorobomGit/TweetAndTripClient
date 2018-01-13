@@ -10,8 +10,10 @@ import {MatTableDataSource} from '@angular/material';
 })
 
 export class ListComponent implements OnInit {
+  state = 'loading';
   results = undefined;
   displayedColumns = ['position', 'name', 'userVenue1', 'userVenue2', 'userVenue3'];
+  error;
   constructor(private http: HttpClient, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
@@ -20,7 +22,6 @@ export class ListComponent implements OnInit {
          const acc = [];
           Object.keys(data).forEach( index => {
             const destination = data[index];
-            console.log(data[index]);
             acc.push({
               'position': Number(index) + 1,
               'name': destination.name,
@@ -29,8 +30,14 @@ export class ListComponent implements OnInit {
               'userVenue3': destination.userVenues[2]
             });
           });
+          this.state = 'success';
           this.results = new MatTableDataSource<Element>(acc);
 
+        },
+        err => {
+          this.state = 'error';
+          this.error = err;
+          console.log(err);
         }
       );
     });

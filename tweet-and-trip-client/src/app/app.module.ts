@@ -10,6 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CustomMaterialModule } from './custom-material/custom-material.module';
 import { HeaderComponent } from './header/header.component';
 
+import {MatCardModule} from '@angular/material';
+import { ErrorcardComponent } from './errorcard/errorcard.component';
+
 const appRoutes: Routes = [{
   path: '',
   component: AppHomeComponent
@@ -23,13 +26,15 @@ const appRoutes: Routes = [{
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     CustomMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   declarations: [
     RootComponent,
     AppHomeComponent,
     ListComponent,
-    HeaderComponent
+    HeaderComponent,
+    ErrorcardComponent
   ],
   bootstrap: [
     RootComponent,

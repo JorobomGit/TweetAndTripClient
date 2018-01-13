@@ -3,10 +3,10 @@
   color="accent"
   mode="indeterminate"
   value="50"
-  *ngIf="!results">
+  *ngIf="state==='loading'">
 </mat-progress-spinner>
 
-<div class="margin-h-xl" *ngIf="results">
+<div class="margin-h-xl" *ngIf="state==='success'">
   <img src="..\assets\tweet-and-trip-logo-mini.png" class="center-element">
   <mat-table class="table" #table [dataSource]="results">
 
@@ -58,3 +58,7 @@
   </mat-table>
 
 </div>
+
+<app-errorcard *ngIf="state==='error'" [responseText]="error.error"></app-errorcard>
+
+

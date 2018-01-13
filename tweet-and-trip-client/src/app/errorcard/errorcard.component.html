@@ -1,0 +1,19 @@
+<mat-card class="error-card">
+  <mat-card-header>
+    <mat-card-title class="error-color">{{errorTitle}}</mat-card-title>
+    <mat-card-subtitle>{{responseText}}</mat-card-subtitle>
+  </mat-card-header>
+  <img src="..\assets\tenor.gif" class="center-element half-width">
+  <mat-card-content>
+    <p class="margin-top-xs">
+      {{errorText}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button routerLink=""
+            class="btn btn-lg btn-danger btn-block"
+            type="submit">
+      {{btnText}}
+    </button>
+  </mat-card-actions>
+</mat-card>

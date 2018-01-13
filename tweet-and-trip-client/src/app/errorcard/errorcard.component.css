@@ -1,0 +1,7 @@
+.error-card {
+  width: 40%;
+  display: block;
+  margin: auto;
+  border-radius: 0.5rem;
+  background-color: #d39dae61;
+}
