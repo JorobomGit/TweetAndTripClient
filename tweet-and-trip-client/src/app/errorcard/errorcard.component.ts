@@ -10,7 +10,7 @@ export class ErrorcardComponent implements OnInit {
   constructor() { }
 
   errorTitle = 'Error!';
-  errorText = 'Make sure that the account is public and exists and search again.';
+  errorText = 'Make sure that the account is public and exists.';
   btnText = 'Try again';
 
   ngOnInit() {
