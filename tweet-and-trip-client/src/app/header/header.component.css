@@ -1,0 +1,13 @@
+.header {
+  background-color: rgba(121, 62, 109, 0.6);
+  height: 6rem;
+  width: 100%;
+  box-shadow: 2px 2px #8b4f97;
+}
+
+.header-logo {
+  height: 100%;
+  padding: 1rem;
+  box-shadow: 2px 2px #8b4f97;
+  cursor: pointer;
+}

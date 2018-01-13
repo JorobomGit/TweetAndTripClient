@@ -2,12 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppHomeComponent } from './app.home';
+import { AppHomeComponent } from './home/app.home';
 import { ListComponent } from './list/list.component';
 import { RootComponent } from './root/root.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { CustomMaterialModule } from './custom-material/custom-material.module';
+import { HeaderComponent } from './header/header.component';
 
 const appRoutes: Routes = [{
   path: '',
@@ -27,10 +28,12 @@ const appRoutes: Routes = [{
   declarations: [
     RootComponent,
     AppHomeComponent,
-    ListComponent
+    ListComponent,
+    HeaderComponent
   ],
   bootstrap: [
-    RootComponent
+    RootComponent,
+    HeaderComponent
   ]
 })
 export class AppModule {

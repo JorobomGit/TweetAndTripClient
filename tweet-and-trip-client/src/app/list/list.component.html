@@ -12,43 +12,43 @@
 
     <!-- Position Column -->
     <ng-container matColumnDef="position">
-      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-      <mat-cell class="row" *matCellDef="let element"> {{element.position}} </mat-cell>
+      <mat-header-cell *matHeaderCellDef class="header-cell"> No. </mat-header-cell>
+      <mat-cell class="padding-v-s" *matCellDef="let element"> {{element.position}} </mat-cell>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef class="header-cell twitter-color"> Name </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="userVenue1">
-      <mat-header-cell *matHeaderCellDef> Venue 1 </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef class="header-cell foursquare-color"> Venue 1 </mat-header-cell>
       <mat-cell *matCellDef="let element">
-            {{element.userVenue1.name}}
-            {{element.userVenue1.category}}
-            {{element.userVenue1.city}}
+            <div *ngIf="element.userVenue1.name">Name: {{element.userVenue1.name}} <br></div>
+            <div *ngIf="element.userVenue1.category">Category: {{element.userVenue1.category}} <br></div>
+            <div *ngIf="element.userVenue1.city">City: {{element.userVenue1.city}} <br></div>
       </mat-cell>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="userVenue2">
-      <mat-header-cell *matHeaderCellDef> Venue 2 </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef class="header-cell foursquare-color"> Venue 2 </mat-header-cell>
       <mat-cell *matCellDef="let element">
-            {{element.userVenue2.name}}
-            {{element.userVenue2.category}}
-            {{element.userVenue2.city}}
+        <div *ngIf="element.userVenue2.name">Name: {{element.userVenue2.name}} <br></div>
+        <div *ngIf="element.userVenue2.category">Category: {{element.userVenue2.category}} <br></div>
+        <div *ngIf="element.userVenue2.city">City: {{element.userVenue2.city}} <br></div>
       </mat-cell>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="userVenue3">
-      <mat-header-cell *matHeaderCellDef> Venue 3 </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef class="header-cell foursquare-color"> Venue 3 </mat-header-cell>
       <mat-cell *matCellDef="let element">
-            {{element.userVenue3.name}}
-            {{element.userVenue3.category}}
-            {{element.userVenue3.city}}
+        <div *ngIf="element.userVenue3.name">Name: {{element.userVenue3.name}} <br></div>
+        <div *ngIf="element.userVenue3.category">Category: {{element.userVenue3.category}} <br></div>
+        <div *ngIf="element.userVenue3.city">City: {{element.userVenue3.city}} <br></div>
       </mat-cell>
     </ng-container>
 
