@@ -11,5 +11,6 @@ and (max-device-width : 1024px) {
   .error-card {
     margin: 2rem;
     width: 100%;
+    max-width: 90%;
   }
 }
