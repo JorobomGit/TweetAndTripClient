@@ -25,9 +25,9 @@ export class ListComponent implements OnInit {
             acc.push({
               'position': Number(index) + 1,
               'name': destination.name,
-              'userVenue1': destination.userVenues[0],
-              'userVenue2': destination.userVenues[1],
-              'userVenue3': destination.userVenues[2]
+              'userVenue1': destination.userVenues[0] || {},
+              'userVenue2': destination.userVenues[1] || {},
+              'userVenue3': destination.userVenues[2] || {}
             });
           });
           this.state = 'success';
@@ -37,7 +37,6 @@ export class ListComponent implements OnInit {
         err => {
           this.state = 'error';
           this.error = err;
-          console.log(err);
         }
       );
     });

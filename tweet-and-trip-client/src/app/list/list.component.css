@@ -8,4 +8,11 @@
   font-size: 1.6rem;
 }
 
+@media only screen
+and (max-device-width : 1024px) {
+  .mobile-tablet-padding {
+    margin: 0;
+    padding: 1rem;
+  }
+}
 

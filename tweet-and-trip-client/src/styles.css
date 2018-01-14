@@ -30,6 +30,15 @@
   width: 50%;
 }
 
+.max-width-100 {
+  max-width: 100%;
+}
+
+.max-border-radius {
+  border-radius: 200px;
+}
+
+
 body {
   background: #eee linear-gradient(294deg, #00aced, #ff4081);
   background-size: 400% 400%;

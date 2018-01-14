@@ -5,3 +5,11 @@
   border-radius: 0.5rem;
   background-color: #d39dae61;
 }
+
+@media only screen
+and (max-device-width : 1024px) {
+  .error-card {
+    margin: 2rem;
+    width: 100%;
+  }
+}
